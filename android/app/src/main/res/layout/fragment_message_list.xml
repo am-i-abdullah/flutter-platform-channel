@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#E5E5E5"
+            android:dropDownVerticalOffset="45dp"
+            android:spinnerMode="dropdown"/>
+        <RelativeLayout
+            android:id="@+id/softTriggerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@id/spinner"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/softwareTriggered"
+                android:layout_centerVertical="true"
+                android:textColor="#555555"
+                android:textSize="15dp" />
+            <EditText
+                android:id="@+id/triggerSecond"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:text="3"
+                android:inputType="number"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="70dp"
+                android:textColor="#000000"
+                android:background="@drawable/et_background"
+                />
+
+            <Button
+                android:id="@+id/softTrigger"
+                android:layout_width="55dp"
+                android:layout_height="27dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/btn_selector"
+                android:text="@string/scan"
+                android:textColor="#ffffff" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_alignParentBottom="true"
+                android:background="#888888"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/customBeepLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@id/softTriggerLayout"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/soundVibrationControl"
+                android:textColor="#555555"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/customBeepLevel"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:text="10"
+                android:inputType="number"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="70dp"
+                android:textColor="#000000"
+                android:background="@drawable/et_background"
+                />
+
+            <Button
+                android:id="@+id/customBeep"
+                android:layout_width="55dp"
+                android:layout_height="27dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/btn_selector"
+                android:text="@string/send"
+                android:textColor="#ffffff" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_alignParentBottom="true"
+                android:background="#888888"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/customBeepTimeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@id/customBeepLayout"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/soundVibrationControl"
+                android:layout_centerVertical="true"
+                android:textColor="#555555"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/customBeepFrequency"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:text="4500"
+                android:inputType="number"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="70dp"
+                android:textColor="#000000"
+                android:background="@drawable/et_background"
+                />
+            <EditText
+                android:id="@+id/customBeepType"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:layout_toLeftOf="@id/customBeepFrequency"
+                android:text="0"
+                android:inputType="number"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:textColor="#000000"
+                android:background="@drawable/et_background"
+                />
+
+
+            <EditText
+                android:id="@+id/customBeepTime"
+                android:layout_width="65dp"
+                android:layout_height="35dp"
+                android:layout_toLeftOf="@id/customBeepType"
+                android:text="1000"
+                android:inputType="number"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:textColor="#000000"
+                android:background="@drawable/et_background"
+                />
+
+            <Button
+                android:id="@+id/customBeepSend"
+                android:layout_width="55dp"
+                android:layout_height="27dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/btn_selector"
+                android:text="@string/send"
+                android:textColor="#ffffff" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_alignParentBottom="true"
+                android:background="#888888"
+                />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/customTimeStampLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_below="@id/customBeepTimeLayout"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/timestampFunction"
+                android:layout_centerVertical="true"
+                android:textColor="#555555"
+                android:textSize="15dp" />
+            <Button
+                android:id="@+id/EnableTimeStamp"
+                android:layout_width="60dp"
+                android:layout_height="27dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="180dp"
+                android:background="@drawable/btn_selector"
+                android:text="Enable"
+                android:textColor="#ffffff" />
+            <Button
+                android:id="@+id/DisableTimeStamp"
+                android:layout_width="60dp"
+                android:layout_height="27dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="115dp"
+                android:background="@drawable/btn_selector"
+                android:text="Disable"
+                android:textColor="#ffffff" />
+            <Button
+                android:id="@+id/TimeStampSetFormat"
+                android:layout_width="100dp"
+                android:layout_height="27dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/btn_selector"
+                android:text="@string/setTime"
+                android:textColor="#ffffff" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginHorizontal="15dp"
+                android:layout_alignParentBottom="true"
+                android:background="#888888"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txt_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/list_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="0.5dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:scrollbars="none" />
+</LinearLayout>
